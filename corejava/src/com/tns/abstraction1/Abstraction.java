@@ -17,8 +17,8 @@ class Zipfilecompressor extends Filecompressor{
 		System.out.println("compresson using Zip.....");
 		int Originalsize=100;
 		int compressedsize=Originalsize*50/100;
-		System.out.println("original size"+Originalsize);
-		System.out.println("compressed size"+compressedsize);
+		System.out.println("original size"+Originalsize+"mb");
+		System.out.println("compressed size"+compressedsize+"mb");
 		
 		
 	}
@@ -26,7 +26,12 @@ class Zipfilecompressor extends Filecompressor{
 class Gzipfilecompressor extends Filecompressor{
 	@Override
 	void compress(String Compress) {
-		// TODO Auto-generated method stub
+		System.out.println("compressing using zip");
+		int Originalsize=100;
+		int compressedsize=Originalsize*50/100;
+		System.out.println("original size"+Originalsize+"mb");
+		System.out.println("compressed size"+compressedsize+"mb");
+		
 		
 	}
 }
@@ -34,8 +39,14 @@ class Gzipfilecompressor extends Filecompressor{
 public class Abstraction {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Zipfilecompressor z=new Zipfilecompressor();
+		z.compress("project.zip");
+		System.out.println();
+		
+		
+		Gzipfilecompressor g=new Gzipfilecompressor();
+        g.compress("project.gz");
+        System.out.println();
 	}
 
 }
